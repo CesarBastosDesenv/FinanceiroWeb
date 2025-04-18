@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, UntypedFormGroup, Validators } from '@angular/forms';
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { ativoService } from 'src/app/services/ativoService';
 import { Ativo } from 'src/app/models/Ativo';
 
@@ -12,7 +13,8 @@ import { Ativo } from 'src/app/models/Ativo';
 export class MinhaCarteiraComponent implements OnInit {
   public form: FormGroup;
   public listaAtivos:Ativo[] = [];
-  public faPlusCircle = faPlusCircle;
+  public faCartPlus = faCartPlus;
+  public faCartArrowDown = faCartArrowDown
 
   constructor ( 
     public ativoService : ativoService,
