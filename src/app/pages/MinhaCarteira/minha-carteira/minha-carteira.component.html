@@ -1,0 +1,52 @@
+<h4>Minha carteira</h4>
+<hr>
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                  <h5>Cadastro de ativo</h5>
+                  <hr>
+                  <form class="form" [formGroup]="form" > 
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label ><b>Ativo</b></label>
+                        <input type="text"  class="form-control" formControlName="nomeAtivo" >
+                      </div>
+                      <div class="col-sm-12">
+                        <label ><b>Nome Completo</b></label>
+                        <input type="text" class="form-control" formControlName="nomeCompleto"  >
+                      </div>
+                      <div class="col-sm-12 my-3">
+                        <button type="submit" class="btn btn-outline-secondary form-control" (click)="salvarDados()" >Salvar</button>  
+                      </div>
+                    </div> 
+                  </form>
+                </div>
+              </div>
+        </div> 
+       
+        <div class="col-sm-8">
+         
+          <div class="card my-1" *ngFor="let item of listaAtivos">
+            <div class="card-body" >
+              <div class="row">
+                <div class="col-sm-5 " >
+                   {{item.nomeAtivo}} - ({{item.nomeCompleto}})
+                </div>
+                <div class="col-sm-3">
+                  366 Cotas
+                </div>
+                <div class="col-sm-4">
+                  <div class="float-right">
+                    <a href="#" class="btn btn-outline-success btn-sm"><fa-icon [icon]="faPlusCircle"></fa-icon> Compra</a>
+                    <a href="#" class="btn btn-outline-danger btn-sm"><i class="fa fa-rocket" style="color:red"></i> Venda</a>
+                  </div>  
+                </div>  
+              </div>  
+            </div>
+          </div>
+   
+        </div> 
+    </div>    
+</div>
